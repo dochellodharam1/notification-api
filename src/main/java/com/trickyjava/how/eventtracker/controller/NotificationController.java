@@ -9,6 +9,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.data.web.SortDefault;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,6 +21,7 @@ public class NotificationController {
     @Autowired
     private ArticleRepository articleRepository;
 
+    @CrossOrigin
     @GetMapping
     public ResponseEntity<Page<Article>> list(@PageableDefault(page = 0, size = 20)
                                               @SortDefault.SortDefaults({

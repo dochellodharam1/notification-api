@@ -1,9 +1,9 @@
 package com.trickyjava.how.eventtracker.feign.dto;
 
 import java.util.List;
+import java.util.function.Supplier;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.google.common.base.Supplier;
 
 import lombok.Data;
 
